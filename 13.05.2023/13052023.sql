@@ -11,4 +11,6 @@
 
 ---select MIN(pop2011), MAX(pop2011), SUM(pop2011) from judete where region='Centru';
 
-select region, SUM(pop2011) populatie_2011, ST_Union(geom) geom from judete group by region;
+---select region, SUM(pop2011) populatie_2011, ST_Union(geom) geom from judete group by region;
+
+select mnemonic, Min(pop2011) populatie_2011, ST_Union(geom) geom from judete group by mnemonic;
